@@ -9,7 +9,8 @@
   
   <title>To-Do List | modified by Klaudia Kalinowska</title>
 
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+
 </head>
 
 <body>
@@ -24,6 +25,7 @@
      <div class="section">
         <div class ="list">
             <h2>Do zrobienia:</h2>
+            <p id="empty">Brak zadań!</p>
             <ul id="todo">
             </ul>
         </div>
@@ -38,7 +40,7 @@
 </div> <!-- End of container -->
     
 <script>
-    (function() {
+    (function() { 
         
         var input = document.getElementById('input');
         var btn = document.getElementById('btn');
@@ -55,6 +57,7 @@
             checkbox.type = 'checkbox';
             checkbox.addEventListener('click', onCheck);
             label.textContent = str;
+  
             
             el.appendChild(checkbox);
             el.appendChild(label);
@@ -82,6 +85,7 @@
                 addTask(makeTaskHtml(str, onCheck));
                 input.value = '';
                 input.focus();
+                document.getElementById('empty').style.display='none';
             }
         };
         
@@ -94,7 +98,9 @@
             }
         });
         input.focus();
+        
     }()); 
 </script>
+        
 </body>
 </html>
