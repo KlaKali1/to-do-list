@@ -1,12 +1,14 @@
 body {
     font-family: sans-serif;
 }
+
 header {
     margin: 1%;
     padding: 1%;
     background-color: #FFEFD5;
     text-decoration: none;
 }
+
 .list {
     padding: 1%;
     margin: 1%;
@@ -14,9 +16,19 @@ header {
     float: left;
     background-color: #FFEFD5;
 }
+
 ul {
     list-style: none;
 }
+
 #done li {
     text-decoration: line-through;
+}
+
+i {
+    padding: 10px;
+}
+
+i:hover {
+    cursor: pointer;
 }
